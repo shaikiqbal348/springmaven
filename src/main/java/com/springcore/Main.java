@@ -13,5 +13,7 @@ public class Main {
         System.out.println("student object"+student2);
         Student student3 = (Student) studentContext.getBean("student3");
         System.out.println("student object"+student3);
+
+
     }
 }
