@@ -29,6 +29,12 @@
               <entry key="456" value="CSC"/>
           </map>
         </property>
+        <property name="props">
+        <props>
+            <prop key="name">"Iqbal"</prop>
+            <prop key="Designation">"Software"</prop>
+        </props>
+        </property>
             </bean>
 
 

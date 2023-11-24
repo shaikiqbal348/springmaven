@@ -20,5 +20,6 @@ public class Main {
         System.out.println("Set of values"+emps.getAddresses());
         System.out.println("List of values"+emps.getPhones());
         System.out.println("Map of values"+emps.getCourses().entrySet());
+        System.out.println("prop of values"+emps.getProps().entrySet());
     }
 }
