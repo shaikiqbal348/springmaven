@@ -1,6 +1,7 @@
 package com.springcore;
 
 import com.springcore.collections.Employee;
+import com.springcore.reference.Hundai;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -21,5 +22,10 @@ public class Main {
         System.out.println("List of values"+emps.getPhones());
         System.out.println("Map of values"+emps.getCourses().entrySet());
         System.out.println("prop of values"+emps.getProps().entrySet());
+
+        //Reference injection
+        ApplicationContext vechile=new ClassPathXmlApplicationContext("refconfig.xml");
+        Hundai hu =(Hundai) vechile.getBean("Hundai");
+        System.out.println("Car details"+hu.getName());
     }
 }
