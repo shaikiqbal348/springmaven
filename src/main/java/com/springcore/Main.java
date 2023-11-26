@@ -1,6 +1,7 @@
 package com.springcore;
 
 import com.springcore.collections.Employee;
+import com.springcore.constructor.Person;
 import com.springcore.reference.Hundai;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -25,7 +26,13 @@ public class Main {
 
         //Reference injection
         ApplicationContext vechile=new ClassPathXmlApplicationContext("refconfig.xml");
-        Hundai hu =(Hundai) vechile.getBean("Hundai");
+        Hundai hu =(Hundai) vechile.getBean("hundai");
         System.out.println("Car details"+hu.getName());
+
+        //Constructor injection
+        ApplicationContext construct = new ClassPathXmlApplicationContext("constructorconfig.xml");
+        Person perdon = (Person) construct.getBean("person");
+        System.out.println("constructor values" +perdon);
     }
+
 }
