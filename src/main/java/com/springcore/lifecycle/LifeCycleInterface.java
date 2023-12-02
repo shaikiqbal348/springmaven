@@ -14,6 +14,10 @@ public class LifeCycleInterface implements InitializingBean, DisposableBean {
         this.price = price;
     }
 
+    public LifeCycleInterface() {
+        super();
+    }
+
     public LifeCycleInterface(String price) {
         this.price = price;
     }

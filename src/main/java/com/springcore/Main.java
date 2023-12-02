@@ -3,6 +3,7 @@ package com.springcore;
 import com.springcore.collections.Employee;
 import com.springcore.constructor.Person;
 import com.springcore.lifecycle.Animal;
+import com.springcore.lifecycle.LifeCycleInterface;
 import com.springcore.reference.Hundai;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
@@ -44,6 +45,9 @@ public class Main {
         life.registerShutdownHook();
 
         //Life cycle Interface using
+        AbstractApplicationContext lifeInt = new ClassPathXmlApplicationContext("lifecycleconfig.xml");
+        LifeCycleInterface lifInt = (LifeCycleInterface) life.getBean("lifeInt");
+        System.out.println("life cycle" + lifInt);
 
     }
 
