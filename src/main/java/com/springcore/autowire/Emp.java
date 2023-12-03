@@ -8,6 +8,7 @@ public class Emp {
     }
 
     public void setAddress(Address address) {
+        System.out.println("byType");
         this.address = address;
     }
 
@@ -16,5 +17,10 @@ public class Emp {
         return "Emp{" +
                 "address=" + address +
                 '}';
+    }
+
+    public Emp(Address address) {
+        System.out.println("autowire by constructor");
+        this.address = address;
     }
 }
