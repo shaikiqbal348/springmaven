@@ -7,20 +7,7 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-<context:annotation-config/>
-   <bean class="com.springcore.autowireannotation.AddressAuto" name="address">
-        <property name="street" value="begumpet"/>
-        <property name="city" value="hyderabad"/>
-    </bean>
-    <bean class="com.springcore.autowireannotation.AddressAuto" name="address1">
-        <property name="street" value="begumprajampet"/>
-        <property name="city" value="chennai"/>
-    </bean>
-
-
-    <bean class="com.springcore.autowireannotation.EmployeeAuto" name="emp">
-
-    </bean>
+<context:component-scan base-package="com.springcore.stereotype"/>
 
 
 </beans>

@@ -1,9 +1,11 @@
 package com.springcore.autowireannotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class EmployeeAuto {
     @Autowired
+    @Qualifier("address")
     private AddressAuto address;
 
     public AddressAuto getAddress() {
